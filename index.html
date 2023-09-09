@@ -1,1 +1,134 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oriental Tran</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link href="./assets/css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a class="logo" href="./index.html">Oriental Tran</a>
+        <div class="nav-collapse"></div>
+      </div>
+    </nav>
+
+    <div class="banner">
+      <h1 class="title">Wellcome to my blog</h1>
+    </div>
+  </header>
+
+  <main>
+    <blockquote>
+      <i>
+        In the process of growing up and self-improvement, I have constantly
+        embraced many wonderful things through reading books or having
+        conversations with people around me.
+        <u>Each person is a unique world in terms of their work, thinking
+          style, and different attitudes towards life</u>. However, I have come to realize that as long as you know how
+        to
+        listen and ask the right questions at the right time, you will
+        discover many valuable things for yourself.
+      </i>
+    </blockquote>
+
+    <div class="profile">
+      <div class="avatar">
+        <img src="./assets/images/avatar.jpg" alt="Avatar" />
+      </div>
+      <div class="info">
+        <h2>Oriental Tran</h2>
+        <em>Software Development</em>
+        <p>
+          I am a dedicated and hardworking individual with a passion for
+          Information Technology (IT). I have recently graduated with
+          distinction from University of Science HCM, specializing in the field of
+          Information Technology. Throughout my academic journey, I have
+          achieved an outstanding GPA of 7.9/10.
+        </p>
+        <p>
+          Currently, I am working as a web programmer, where I
+          specialize in PHP web development. As a programmer, I am driven and
+          patient, always willing to put in the effort and perseverance
+          required for continuous learning and growth. I enjoy exploring the
+          ever-evolving world of web development and staying up-to-date with
+          the latest technologies and trends.
+        </p>
+        <p>
+          I believe that my strong academic background, coupled with my
+          dedication and passion for programming, make me a valuable asset in
+          the field of IT.
+          <b><i>I am always eager to take on new challenges and contribute to
+              innovative projects.</i></b>
+        </p>
+        <p>
+          Thank you for considering my introduction, and I look forward to the
+          opportunity to contribute my skills and knowledge in the IT
+          industry.
+        </p>
+      </div>
+    </div>
+
+    <hr />
+
+    <h3 class="course-tilte">Udacity course certificate</h3>
+
+    <div id="container"></div>
+
+    <hr />
+
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p class="name">Oriental Tran</p>
+      <p class="email">DongPhuongQST@gmail.com</p>
+    </div>
+  </footer>
+  <script>
+
+    // Card data array
+    const cardData = [
+      {
+        imgSrc: "./assets/images/reactjs.png",
+        alt: "Image 2",
+        title: "React JS",
+      },
+      {
+        imgSrc: "./assets/images/aws_cloud_architect.png",
+        alt: "Image 2",
+        title: "AWS cloud Architect",
+      },
+    ];
+
+    // Function to generate card HTML
+    function generateCardHTML(card) {
+      return `
+        <div class="card">
+          <img src="${card.imgSrc}" alt="${card.alt}" />
+          <h5>${card.title}</h5>
+        </div>
+      `;
+    }
+
+    // Render the card list
+    document.addEventListener("DOMContentLoaded", function () {
+      const container = document.getElementById("container");
+      const cardListHTML = cardData.map(generateCardHTML).join("");
+      container.innerHTML = `<div class="card-list">${cardListHTML}</div>`;
+    });
+
+
+  </script>
+</body>
+
+</html>
